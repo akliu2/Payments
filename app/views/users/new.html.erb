@@ -1,0 +1,28 @@
+<div class="sign-in-container">
+
+  <br>
+  <div class="log-in-page modal-content">
+  <h3 class="sign-up-in-form">Sign Up</h3>
+
+    <form class="animated fadeIn sign-up-in-form" action="<%= users_url %>" method="post">
+      <%= auth_token_input %>
+
+      <label>
+        Username
+        <input type="text" name="user[username]" value="">
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="user[password]" value="">
+      </label>
+
+      <input type="submit" value="Sign Up">
+      <br>
+      <br>
+      <p>Already a user?
+        <%= link_to "Sign in here!", new_session_url %>
+      </p>
+    </form>
+  </div>
+</div>
