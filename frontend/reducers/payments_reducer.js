@@ -3,25 +3,27 @@ import { RECEIVE_PAYMENTS,
          TODO_ERROR } from '../actions/payment_actions';
 import merge from 'lodash/merge';
 
-// const initialState = {
-//   1: {
-//     from: "mychi",
-//     to: "andrew",
-//     amount: 50000,
-//     card: "VISA",
-//     cardNumber: "1234567890123456"
-//   },
-//   2: {
-//     from: "andrew",
-//     to: "mychi",
-//     amount: 25000,
-//     card: "VISA",
-//     cardNumber: "1234567890123456"
-//   }
-// };
+const initialState = {
+  1: {
+    id: 1,
+    from: "mychi",
+    to: "andrew",
+    amount: 50000,
+    card: "VISA",
+    cardNumber: "1234567890123456"
+  },
+  2: {
+    id: 2,
+    from: "andrew",
+    to: "mychi",
+    amount: 25000,
+    card: "VISA",
+    cardNumber: "1234567890123456"
+  }
+};
 
-const paymentsReducer = (state = {}, action) => {
-// const paymentsReducer = (state = initialState, action) => {
+// const paymentsReducer = (state = {}, action) => {
+const paymentsReducer = (state = initialState, action) => {
   Object.freeze(state);
   let nextState;
 

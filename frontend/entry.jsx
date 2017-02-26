@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
-import { getAllPayments } from './reducers/selectors';
+import { allPayments } from './reducers/selectors';
 import { receivePayments, receivePayment, paymentError } from './actions/payment_actions.js';
 
 window.receivePayment = receivePayment;
@@ -15,7 +15,7 @@ import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
-  const selector = getAllPayments;
+  const selector = allPayments;
 
   debugger;
   window.store = store;
